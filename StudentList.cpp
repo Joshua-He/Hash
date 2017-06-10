@@ -106,6 +106,7 @@ void studentGenerator(char array[5000], char file[200]){
     cout << "Inpute file cannot be opened, please try reentering file name" << endl;
   }
 
+  
   //Take the students from the file and modify their information by student ID
 
 
@@ -114,7 +115,7 @@ void studentGenerator(char array[5000], char file[200]){
 }
 
 
-
+//creates table
 void createTable(Node** &hashTable, int size){
   //Create hashTable which is an array of Node* with an inputted size
   hashTable = new Node*[size];
