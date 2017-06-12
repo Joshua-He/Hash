@@ -10,13 +10,20 @@ class Node{
   ~Node();
   Node* getNext();
   void setNext(Node* newNext);
-  void setValue(int newvalue);
-  int getValue();
-  Node* getParent();
-  void setParent(Node* newParent);
+  int getId();
+  float getGpa();
+  char* getFirst();
+  char* getLast();
+  void setId(int newid);
+  void setGpa(float newfloat);
+  void setFirst(char first[50]);
+  void setLast(char last[50]);
  private:
+  
   Node* next;
-  Node* parent;
-  int value;
+  int id;
+  float gpa;
+  char first[50];
+  char last[50];
 };
 #endif

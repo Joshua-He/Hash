@@ -6,7 +6,10 @@ using namespace std;
 
 Node::Node(){
   next = NULL;
-  parent = NULL;
+  id = 0;
+  gpa = 0;
+  first[0] = '\0';
+  last[0] = '\0';
 }
 
 Node::~Node(){
@@ -20,29 +23,51 @@ Node* Node::getNext(){
   return next;
 }
 
-// get value
-
-int Node::getValue(){
-  return value;
-}
-
 //set next
 
 void Node::setNext(Node* newNext){
   next = newNext;
 }
 
-// set value to the operator being passed in
-void Node::setValue(int newvalue){
-  value = newvalue;
+//getid
+
+int Node::getId(){
+  return id;
 }
 
-Node* Node::getParent(){
-  return parent;
+//getgpa
+
+float Node::getGpa(){
+  return gpa;
 }
 
-void Node::setParent(Node* newParent){
-  parent = newParent;
+//getfirst
+char* Node::getFirst(){
+  return first;
+}
+
+//get lasr name
+char* Node::getLast(){
+  return last;
+}
+
+// set id
+void Node::setId(int newid){
+  id = newid;
+}
+
+//set gpa
+void Node::setGpa(float newgpa){
+  gpa = newgpa;
+}
+
+//setfirst
+void Node::setFirst(char newfirst[50]){
+  strncpy(first, newfirst, 50);
 }
 
 
+//setlast
+void Node::setLast(char newlast[50]){
+  strncpy(last, newlast, 50);
+}
