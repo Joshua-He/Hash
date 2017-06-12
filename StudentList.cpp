@@ -13,6 +13,12 @@
 
 using namespace std;
 
+/*
+
+  Joshua He Period 7
+  This program is a hash table which can store up to 3 students in each array index before rehashing
+
+ */
 void createTable(Node** &hashTable, int size);
 void addToHash(Node** &hashTable, Node* Student, int size, int &collisionNumber);
 int generateHashNumber(int size, int studentID);
